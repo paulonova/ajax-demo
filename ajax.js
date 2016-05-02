@@ -18,6 +18,11 @@ request.onreadystatechange = function() {
   if(request.readyState == 4 && request.status == 200){
      	//I variabeln res (response) finns det information...
   		console.log("Svaret (response) är " + request.responseText);
+    	
+    //Spara texten i en variabel
+    var data = request.responseText;
+    document.write(data);
+    
   }
  
 }
