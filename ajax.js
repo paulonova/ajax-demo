@@ -12,18 +12,18 @@
 // Påbörja en hämtning
 var request = new XMLHttpRequest();
 
-request.onreadystatechange = function() {
+request.onreadystatechange = function() {	
+
 	console.log("Nånting hände!");
-  
-  if(request.readyState == 4 && request.status == 200){
-     	//I variabeln res (response) finns det information...
-  		console.log("Svaret (response) är " + request.responseText);
-    	
-    //Spara texten i en variabel
-    var data = request.responseText;
-    document.write(data);
-    
-  }
+
+	if(request.readyState == 4 && request.status == 200) {
+      // I variabeln res (response) finns det information...
+      console.log("Svaret (response) är " + request.responseText);
+      
+      // Spara texten i en variabel
+      var data = request.responseText;
+      document.write(data);
+     }
  
 }
 
