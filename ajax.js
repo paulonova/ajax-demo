@@ -16,5 +16,5 @@ request.onreadystatechange = function() {
 	console.log("Nånting hände!");
 }
 
-request.open('GET', 'http://www.google.com');
+request.open('GET', 'http://mardby.se/AJK15G/lorem_text.php');
 request.send();
