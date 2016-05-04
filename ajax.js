@@ -32,6 +32,11 @@ request.open('GET', 'https://api.spotify.com/v1/users/hello');
 request.send();
 console.log("Sista raden i koden...");
 
+// Ovan rad körs före loggen om att vi tagit emot ett svar
+// Varför? Jo, anropet .send() är asynkront...
+// ...koden kommer att köras parallellt (funktionen på rad 15 väntar i bakgrunden på att anropas)
+// Jämför sms med telefon (sms asynkront, telefonsamtal är inte det - vi måste "lägga på" för ett nytt samtal).
+// Vi behöver inte vänta på att en tidigare rad kod "är klar"
 
 
 
